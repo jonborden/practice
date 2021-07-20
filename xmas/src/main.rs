@@ -1,6 +1,6 @@
 // rust homework, ch 3.5 "control flow"
 // 7.20.21
-// 'Print the lyrics to the Christmas Carol "The Twelve Days of Christmas," taking advantage of the repetition in the song.
+// 'Print the lyrics to the Christmas Carol "The Twelve Days of Christmas," taking advantage of the repetition in the song.'
 
 fn main() {
 	let mut counter = 0;
@@ -12,6 +12,7 @@ fn main() {
 		if counter == 2 {
 			date = "nd";
 		}
+		// is this sequence better done with 'else if's instead of 'if's? it seems implied as results are exclusive
 		if counter == 3 {
 			date = "rd"
 		}
@@ -24,6 +25,7 @@ fn main() {
 	    
 		println!("On the {}{} day of Christmas, my true love gave to me,", counter, date);
 		
+		// there's probably a wait to add a 'wait' or 'pause' command somehow to delay the line printing s.t. it feels more like an actual song
 		if counter > 11 {
 			println!("twelve drummers drumming");
 		}
