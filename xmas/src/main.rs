@@ -1,15 +1,19 @@
+// rust homework, ch 3.5 "control flow"
+// 7.20.21
+// 'Print the lyrics to the Christmas Carol "The Twelve Days of Christmas," taking advantage of the repetition in the song.
+
 fn main() {
 	let mut counter = 0;
 	let mut date = "st";
 	
 	loop {
 		counter += 1;
-		
+
 		if counter == 2 {
 			date = "nd";
 		}
 		if counter == 3 {
-            date = "rd"
+			date = "rd"
 		}
 		if counter == 4 {
 			date = "th"
