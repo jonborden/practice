@@ -1,5 +1,6 @@
-// converts F to C and back again
-// current version 7.20.21
+// rust homework ch 3.5 "control flow"
+// 7.20.21
+// 'Convert temperatures between Fahrenheit and Celsius'
 
 use std::io;
 
