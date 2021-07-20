@@ -1,3 +1,6 @@
+// converts F to C and back again
+// current version 7.20.21
+
 use std::io;
 
 fn main() {
@@ -6,7 +9,6 @@ fn main() {
     println!("~ Welcome to Temperature Converter! ~");
     println!("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     
-
     loop {
          println!("Please select Celsius or Fahrenheit, or type quit to exit.");
         
@@ -26,7 +28,9 @@ fn main() {
                 .read_line(&mut temp)
                 .expect("Failed to read line");
 
+            // 'please type a number' exception could use better error-handling. i don't know how to do that yet.           
             let temp: f32 = temp.trim().parse().expect("Please type a number!");
+            // is there a way to define ctof and ftoc once in the main scope instead of within each subscope?
             let ctof = temp * 1.8 + 32.0;
             println!("{}C is {} in Fahrenheit!", temp, ctof);
             println!("Thank you!");
@@ -64,7 +68,7 @@ fn main() {
             io::stdin()
             .read_line(&mut temp)
             .expect("Failed to read line");
-
+			
             let temp: f32 = temp.trim().parse().expect("Please type a number!");
             let ftoc = (temp - 32.0) * (5.0 % 9.0);
             println!("{}F is {} in Celsius!", temp, ftoc);
